@@ -1,4 +1,5 @@
 // Utility functions for report processing
+import * as XLSX from 'xlsx'
 
 export function parseFloatValue(value) {
   if (!value || value === '') return 0.0;
@@ -220,7 +221,6 @@ export function calculateSectionTotals(items) {
 }
 
 export function generateExcel(transactionData) {
-  const XLSX = window.XLSX;
   const wb = XLSX.utils.book_new();
   const ws = XLSX.utils.aoa_to_sheet([]);
 
